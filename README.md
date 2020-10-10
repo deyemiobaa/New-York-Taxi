@@ -14,9 +14,13 @@ Once we have a close estimate of how much taxi drivers makes per hour in a regio
 
 Here is the list of features that can be used for model development and came with the original data: (‘PULocationID’, ‘transaction_date’,’ transaction_month’,’ transaction_day’, ‘transaction_hour’, ‘trip_distance’,’ total_amount’, ‘count_of_transactions’)
 You can refer to [this document](https://www1.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf) for the meaning of each feature.
-There were values in the "total_amount" that was as high as 600,000 and values below zero. I removed these datapoints to make our data much better for the model
+There were values in the "total_amount" that was as high as 600,000 and values below zero. 
+I removed these datapoints to make our data much better for the model
+
 ![Total_amount_before_cleaning](/images/total_amt_bef_cln.png)
+
 Cleaned Negative & Extremely High Values
+
 ![Total_amount_after_cleaning](/images/total_amt_aft_cln.png)
 
 #### +Feature Engineering
