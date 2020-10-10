@@ -7,9 +7,9 @@ It's very possible for taxi drivers NewYork to miss out on opportunities because
 ### How I intend to use the solution:
 Once we have a close estimate of how much taxi drivers makes per hour in a region/county, the head of the taxi operations can allocate drivers to serve the city better based on the predictions. Also, drivers would spend much less time trying to figure out where to position themselves to get passengers
 
-#### A rundown of the what I did in this projects
+##### A rundown of the what I did in this projects
 
-#### + Data Importing, Cleaning and Exploration:
+### Data Importing, Cleaning and Exploration:
 ![Data_Source (January-2019):](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
 
 Here is the list of features that can be used for model development and came with the original data: (‘PULocationID’, ‘transaction_date’,’ transaction_month’,’ transaction_day’, ‘transaction_hour’, ‘trip_distance’,’ total_amount’, ‘count_of_transactions’)
@@ -24,10 +24,10 @@ Cleaned Negative & Extremely High Values
 The total_amount looks like this after cleaning the bad data
 ![Total_amount_after_cleaning](/images/total_amt_aft_cln.png)
 
-#### + Feature Engineering
+### Feature Engineering
 I explored and created new features in the data including holidays, weekends, and Borough information. The first two features were created from the existing data and the Borough information was gotten from the same page as the original data. I contains more information that represents the PickUp Location IDs
 
-#### + The algorithms I tried and the results
+### The algorithms I tried and the results
 I used Decision Trees, Random Forest and Gradient Boosting. The benchmark model is a Decision Tree. In the benchmark model, only the original features of the model as stated above are included. And on the normal models I used all original features plus the newly created ones.
 
 Here are the performance results before tuning:
@@ -76,7 +76,7 @@ Here is the True vs. Predicted value plot for the tuned Gradient Boosting model.
 ![Performance graph of tuned Random Forest](/images/Gradient_boost_final.png)
 
 
-#### Next steps
+### Next steps
 From the plot above, you can see that the performance can be improved. A number of things I can do is:
 * limiting the regions included in this analysis. Removing the regions that do not normally get a lot of taxi traffic. This might be a good action to take depending on the problem at hand. (If the goal is to service all of NYC no matter what, we should keep those data points)
 * hand selecting borough that should be included in the model. Again this should be decided based on the problem at hand and how this model is going to be used. But if the goal is solely to increase model performance, only including boroughs with the most transactions can increase the performance since likely most mistakes come from boroughs with fewer data points. Though this assumption should be checked before taking this action.
