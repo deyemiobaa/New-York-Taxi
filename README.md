@@ -9,7 +9,7 @@ Once we have a close estimate of how much taxi drivers makes per hour in a regio
 
 #### A rundown of the what I did in this projects
 
-#### +Data Importing, Cleaning and Exploration:
+#### + Data Importing, Cleaning and Exploration:
 ![Data_Source (January-2019):](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
 
 Here is the list of features that can be used for model development and came with the original data: (‘PULocationID’, ‘transaction_date’,’ transaction_month’,’ transaction_day’, ‘transaction_hour’, ‘trip_distance’,’ total_amount’, ‘count_of_transactions’)
@@ -21,12 +21,13 @@ I removed these datapoints to make our data much better for the model
 
 Cleaned Negative & Extremely High Values
 
+The total_amount looks like this after cleaning the bad data
 ![Total_amount_after_cleaning](/images/total_amt_aft_cln.png)
 
-#### +Feature Engineering
+#### + Feature Engineering
 I explored and created new features in the data including holidays, weekends, and Borough information. The first two features were created from the existing data and the Borough information was gotten from the same page as the original data. I contains more information that represents the PickUp Location IDs
 
-#### +The algorithms I tried and the results
+#### + The algorithms I tried and the results
 I used Decision Trees, Random Forest and Gradient Boosting. The benchmark model is a Decision Tree. In the benchmark model, only the original features of the model as stated above are included. And on the normal models I used all original features plus the newly created ones.
 
 Here are the performance results before tuning:
